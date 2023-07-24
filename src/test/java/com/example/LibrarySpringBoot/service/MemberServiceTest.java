@@ -1,5 +1,6 @@
 package com.example.LibrarySpringBoot.service;
 
+import com.example.LibrarySpringBoot.exception.InvalidIdException;
 import com.example.LibrarySpringBoot.model.Member;
 import com.example.LibrarySpringBoot.repository.MemberRepository;
 import org.junit.jupiter.api.Test;
@@ -11,6 +12,7 @@ import java.util.Date;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.util.AssertionErrors.assertNull;
 
@@ -30,10 +32,10 @@ public class MemberServiceTest {
         int id = -1;
 
         //act
-        Member member = memberService.getOneById(id);
-
         //assert
-        assertNull("Name should be null", member.getName());
+        Exception exception = assertThrows(InvalidIdException.class, () ->memberService.getOneById(id));
+        assertEquals("That id is invalid", exception.getMessage());
+
     }
 
     @Test

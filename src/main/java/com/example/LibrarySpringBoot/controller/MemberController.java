@@ -29,7 +29,6 @@ public class MemberController {
     @PostMapping("/members")
     public ResponseEntity<Member> addMember(@RequestBody Member m){
         Member createdM = memberService.saveNewMember(m);
-        createdM = null;
         if (createdM == null){
             return new ResponseEntity<>(new Member(), HttpStatus.PRECONDITION_FAILED);
         }else{
