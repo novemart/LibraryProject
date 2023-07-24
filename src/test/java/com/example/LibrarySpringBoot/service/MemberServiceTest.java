@@ -28,7 +28,6 @@ public class MemberServiceTest {
     MemberService memberService;
 
     @Test
-    @Disabled
     public void getOneByIdReturnsNewIfNegative(){
         //arrange
         int id = -1;
@@ -41,7 +40,6 @@ public class MemberServiceTest {
     }
 
     @Test
-    @Disabled
     public void getOneByIdReturnsMember(){
         //arrange
         int id = 1;

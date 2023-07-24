@@ -42,7 +42,6 @@ public class MemberControllerTest {
     ObjectMapper objectMapper;
 
     @Test
-    @Disabled
     public void getAllMembersTest() throws Exception{
         //arrange
         Member m = new Member();
@@ -75,7 +74,6 @@ public class MemberControllerTest {
     }
 
     @Test
-    @Disabled
     public void addMemberTest() throws Exception {
         Member m = new Member();
         m.setName("Martina");
