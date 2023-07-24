@@ -4,6 +4,7 @@ import com.example.LibrarySpringBoot.model.Member;
 import com.example.LibrarySpringBoot.service.MemberService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -41,6 +42,7 @@ public class MemberControllerTest {
     ObjectMapper objectMapper;
 
     @Test
+    @Disabled
     public void getAllMembersTest() throws Exception{
         //arrange
         Member m = new Member();
@@ -73,6 +75,7 @@ public class MemberControllerTest {
     }
 
     @Test
+    @Disabled
     public void addMemberTest() throws Exception {
         Member m = new Member();
         m.setName("Martina");

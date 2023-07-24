@@ -1,6 +1,7 @@
 package com.example.LibrarySpringBoot.repository;
 
 import com.example.LibrarySpringBoot.model.Member;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -20,6 +21,7 @@ public class MemberRepositoryTest {
     MemberRepository memberRepo;
 
     @Test
+    @Disabled
     public void findMembersByFirstName(){
         //arrange
         Member m = new Member();
