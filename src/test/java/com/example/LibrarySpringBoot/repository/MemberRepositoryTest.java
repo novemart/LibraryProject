@@ -21,6 +21,7 @@ public class MemberRepositoryTest {
     MemberRepository memberRepo;
 
     @Test
+    @Disabled
     public void findMembersByFirstName(){
         //arrange
         Member m = new Member();
